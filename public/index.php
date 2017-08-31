@@ -26,5 +26,8 @@ require __DIR__ . '/../config/container.php';
 // Register routes
 require __DIR__ . '/../config/routes.php';
 
+// Middleware configuration
+require __DIR__ . '/../config/middleware.php';
+
 // Run app
 $app->run();
