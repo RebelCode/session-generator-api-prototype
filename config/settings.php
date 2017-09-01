@@ -46,7 +46,7 @@ return [
         ],
 
         // some mock services
-        'services' => [
+        'services'   => [
             15 => [
                 'id'             => 15,
                 'title'          => 'Polish and clean',
@@ -58,17 +58,15 @@ return [
                         'price'  => [
                             'amount'    => 20,
                             'currency'  => 'USD',
-                            'formatted' => '$20.00'
+                            'formatted' => '$20.00',
                         ],
                     ],
                     [
                         'length' => 3600 + 1800, // 1 hour 30 mins
                         'price'  => [
-                            'price'  => [
-                                'amount'    => 30,
-                                'currency'  => 'USD',
-                                'formatted' => '$30.00'
-                            ],
+                            'amount'    => 30,
+                            'currency'  => 'USD',
+                            'formatted' => '$30.00',
                         ],
                     ],
                     [
@@ -76,7 +74,7 @@ return [
                         'price'  => [
                             'amount'    => 50,
                             'currency'  => 'USD',
-                            'formatted' => '$50.00'
+                            'formatted' => '$50.00',
                         ],
                     ],
                 ],
@@ -90,15 +88,14 @@ return [
                     [
                         'length' => 7200, // 2 hour
                         'price'  => [
-                            'price'  => [
-                                'amount'    => 99.99,
-                                'currency'  => 'EUR',
-                                'formatted' => '€20.00'
-                            ],
+                            'amount'    => 99.99,
+                            'currency'  => 'EUR',
+                            'formatted' => '€20.00',
                         ],
                     ],
                 ],
             ],
+
         ],
     ],
 ];
