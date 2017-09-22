@@ -10,30 +10,53 @@ return [
                 3600,        // 1 hour
                 3600 + 1800, // 1 hour 30 mins
                 10800,       // 3 hours
+                3600 * 48    // 2 days
             ],
             'padding' => 0,
         ],
 
         'availabilityGenerator' => [
             'rules' => [
-                'monday'    => [
-                    ['10:00', '17:00'],
+                [
+                    'from' => [
+                        'dotw' => 'monday',
+                        'time' => '10:00',
+                    ],
+                    'till' => [
+                        'dotw' => 'wednesday',
+                        'time' => '10:00'
+                    ]
                 ],
-                'tuesday'   => [
-                    ['10:00', '17:00'],
+                [
+                    'from' => [
+                        'dotw' => 'thursday',
+                         'time' => '10:00',
+                    ],
+                    'till' => [
+                        'dotw' => 'thursday',
+                        'time' => '13:00'
+                    ]
                 ],
-                'wednesday' => [
-                    ['10:00', '12:00'],
-                    ['15:00', '19:00'],
+                [
+                    'from' => [
+                        'dotw' => 'thursday',
+                        'time' => '15:00',
+                    ],
+                    'till' => [
+                        'dotw' => 'thursday',
+                        'time' => '18:00'
+                    ]
                 ],
-                'thursday'  => [
-                    ['10:00', '17:00'],
-                ],
-                'friday'    => [
-                    ['10:00', '17:00'],
-                ],
-                'saturday'  => [],
-                'sunday'    => [],
+                [
+                    'from' => [
+                        'dotw' => 'friday',
+                        'time' => '12:00',
+                    ],
+                    'till' => [
+                        'dotw' => 'friday',
+                        'time' => '18:00'
+                    ]
+                ]
             ],
         ],
 

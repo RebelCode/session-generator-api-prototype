@@ -36,13 +36,20 @@ class AvailabilityGenerator implements SessionGeneratorInterface
         while ($currDate < $endDate) {
             // Get day of the week name, to map to rules
             $_dotw         = strtolower(date('l', $currDate));
-            $_dotwRules    = $this->rules[$_dotw];
             $_dotwSessions = [];
 
             // Process each rule
-            foreach ($_dotwRules as $_rule) {
-                $_ruleStart = strtotime($_rule[0], $currDate);
-                $_ruleEnd   = strtotime($_rule[1], $currDate);
+            foreach ($this->rules as $_rule) {
+                $_ruleFrom = $_rule['from'];
+                $_ruleTill = $_rule['till'];
+
+                if ($_ruleFrom['dotw'] !== $_dotw) {
+                    continue;
+                }
+
+                $_ruleStart = strtotime($_ruleFrom['time'], $currDate);
+                $s = sprintf('next %s %s', $_ruleTill['dotw'], $_ruleTill['time']);
+                $_ruleEnd   = strtotime($s, $currDate);
 
                 $_ruleSessions = $this->generator->generate($_ruleStart, $_ruleEnd);
                 $_dotwSessions = array_merge($_dotwSessions, $_ruleSessions);
