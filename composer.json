@@ -29,19 +29,5 @@
 	"scripts": {
         "start": "php -S 127.0.0.1:8000 -t ./public",
         "test": "phpunit"
-	},
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/RebelCode/session-generator"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/RebelCode/session-generator-interface"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/invocable-interface"
-        }
-    ]
+	}
 }

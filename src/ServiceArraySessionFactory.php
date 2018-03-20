@@ -2,9 +2,7 @@
 
 namespace RebelCode\Sessions\Api;
 
-use Dhii\Expression\ExpressionInterface;
-use Dhii\Util\Invocation\InvocableInterface;
-use Dhii\Util\String\StringableInterface;
+use Dhii\Invocation\InvocableInterface;
 
 /**
  * A session factory that creates sessions in the form of associative arrays that are also aware of a service ID.
