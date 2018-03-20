@@ -12,7 +12,7 @@ $app->get(
 );
 
 $app->get(
-    '/services',
+    '/service',
     function(Request $request, Response $response, $args) {
         $response = $response->withAddedHeader('Content-type', 'application/json');
         $settings = $this->get('settings');
