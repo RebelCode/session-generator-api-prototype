@@ -8,14 +8,15 @@
             "email": "dev@rebelcode.com"
         }
     ],
+    "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.0",
         "slim/slim": "^3.1",
         "slim/php-view": "^2.0",
         "rebelcode/session-generator": "dev-task/initial-classes",
-        "dhii/invocable-interface": "dev-task/initial-interfaces",
-        "dhii/expression-interface": "v0.1"
+        "dhii/invocable-interface": "^0.1",
+        "dhii/expression-interface": "^0.2"
     },
     "require-dev": {
         "phpunit/phpunit": ">=4.8 < 6.0"
