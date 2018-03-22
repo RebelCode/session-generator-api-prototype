@@ -25,7 +25,7 @@ $container['sessionFactoryFactory'] = function(ContainerInterface $c) {
 $container['sessionGeneratorFactory'] = function(ContainerInterface $c) {
     return function($service) use ($c) {
         $settings = $c->get('settings')['sessionGenerator'];
-        $lengths  = $settings['lengths'];
+        $lengths  = array_column($service['sessionLengths'], 'length');
         $padding  = $settings['padding'];
 
         // Create the session factory using the service ID

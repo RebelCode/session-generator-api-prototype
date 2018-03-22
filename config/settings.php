@@ -6,6 +6,7 @@ return [
         'addContentLengthHeader' => false, // Allow the web server to send the content-length header
 
         'sessionGenerator' => [
+            // Now unused
             'lengths' => [
                 3600,        // 1 hour
                 3600 + 1800, // 1 hour 30 mins
