@@ -58,7 +58,7 @@ $app->get(
 
         $settings  = $this->get('settings');
         $services  = $settings['services'];
-        $serviceId = $args['serviceId'];
+        $serviceId = (string) $args['serviceId'];
 
         $service = isset($services[$serviceId])
             ? $services[$serviceId]

@@ -70,7 +70,7 @@ return [
 
         // some mock services
         'services'   => [
-            15 => [
+            "15" => [
                 'id'             => 15,
                 'title'          => 'Polish and clean',
                 'description'    => "Lorem ipsum",
@@ -102,7 +102,7 @@ return [
                     ],
                 ],
             ],
-            22 => [
+            "22" => [
                 'id'             => 22,
                 'title'          => 'Diving lessons',
                 'description'    => "Lorem ipsum",
